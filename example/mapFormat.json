@@ -1,0 +1,14 @@
+{
+    "0xffffff": {
+        "kind": "cloud"
+    },
+    "0xff0000": {
+        "kind": "player"
+    },
+    "0x00ff00": {
+        "kind": "grass"
+    },
+    "0xffff00": {
+        "kind": "gold"
+    }
+}
