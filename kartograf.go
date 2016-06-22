@@ -42,9 +42,8 @@ func main() {
 	tiles := make([]interface{}, 0, 0)
 	for x := 0; x < w; x++ {
 		for y := 0; y < h; y++ {
-			rt, gt, bt, _ := mapImage.At(x, y).RGBA()
-			r, g, b := uint8(rt), uint8(gt), uint8(bt)
-			colorHex := fmt.Sprintf("0x%.2x%.2x%.2x", r, g, b)
+			r, g, b, _ := mapImage.At(x, y).RGBA()
+			colorHex := fmt.Sprintf("0x%2.2x%2.2x%2.2x", r, g, b)
 			if formatJSON[colorHex] != nil {
 				tile := map[string]interface{}{}
 				tile["x"] = x
