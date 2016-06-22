@@ -43,7 +43,7 @@ func main() {
 	for x := 0; x < w; x++ {
 		for y := 0; y < h; y++ {
 			r, g, b, _ := mapImage.At(x, y).RGBA()
-			colorHex := fmt.Sprintf("0x%2.2x%2.2x%2.2x", r, g, b)
+			colorHex := fmt.Sprintf("0x%.2x%.2x%.2x", uint8(r), uint8(g), uint8(b))
 			if formatJSON[colorHex] != nil {
 				tile := map[string]interface{}{}
 				tile["x"] = x
